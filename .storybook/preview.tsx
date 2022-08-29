@@ -1,6 +1,4 @@
-import { ThemeProvider } from 'styled-components'
 
-import { GlobalStyle, theme } from '../src/styles'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -8,9 +6,9 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
+    <div style={{ padding: '3rem' }}>
       <Story />
-    </ThemeProvider>
+    </div>
+
   ),
 ]

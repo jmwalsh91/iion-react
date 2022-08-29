@@ -1,9 +1,20 @@
 import { Button, Card, Grid, Mark, Text, Title } from '@mantine/core'
 
-function CollectionCard() {
-  const ownerId = '0x48Bb46F5B7c115d93837DcA2a81C608CdE52a8Cf'
+import { CollectionCardProps } from '~/types/components'
+
+function CollectionCard({
+  owner,
+  title,
+  description,
+  image,
+  url,
+  bg,
+}: CollectionCardProps) {
   const shortenedAddress =
-    ownerId.substring(0, 5) + '...' + ownerId.substring(ownerId.length - 5)
+    owner.substring(0, 5) + '...' + owner.substring(owner.length - 5)
+  const background = bg
+    ? `url("${bg}")`
+    : 'linear-gradient(to bottom, beige , cyan)'
   return (
     <Card
       withBorder
@@ -12,7 +23,7 @@ function CollectionCard() {
       sx={{
         height: '100%',
         margin: '3rem',
-        backgroundImage: `url("src/public/iionbg.png")`,
+        backgroundImage: background,
         borderRadius: '3rem',
         border: '2px solid #eaeaea',
         boxShadow: '0px 5px 10px 4px rgba(0, 0, 0, 0.5)',
@@ -27,7 +38,7 @@ function CollectionCard() {
       </Text>
       <Title align="right">
         <Mark color="yellow" p="xs">
-          Collection Title
+          {title}
         </Mark>
       </Title>
       <Card.Section
@@ -46,7 +57,7 @@ function CollectionCard() {
           <Grid.Col span={4}>
             <div
               style={{
-                backgroundImage: 'url(src/public/img7.png)',
+                backgroundImage: `url(${image})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 height: '40vh',
@@ -79,16 +90,7 @@ function CollectionCard() {
               }}
             >
               <Card.Section inheritPadding withBorder>
-                <Text>
-                  Perhaps the world&apos;s second worst crime is boredom. The
-                  first is being a bore. Perhaps the world&apos;s second worst
-                  crime is boredom. The first is being a bore. Perhaps the
-                  world&apos;s second worst crime is boredom. The first is being
-                  a bore. Perhaps the world&apos;s second worst crime is
-                  boredom. The first is being a bore. Perhaps the world&apos;s
-                  second worst crime is boredom. The first is being a bore.
-                  Perhaps the world&apos;s second worst crime is boredom.
-                </Text>
+                <Text>{description}</Text>
               </Card.Section>
             </Card>
           </Grid.Col>
