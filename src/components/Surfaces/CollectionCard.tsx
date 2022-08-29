@@ -71,7 +71,6 @@ function CollectionCard() {
               View on Foundation
             </Button>
           </Grid.Col>
-
           <Grid.Col span={8}>
             <Card
               withBorder
