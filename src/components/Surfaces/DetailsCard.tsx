@@ -1,19 +1,6 @@
-import {
-  Card,
-  Stack,
-  Title,
-  Text,
-  Button,
-  Group,
-  Space,
-  Breadcrumbs,
-} from '@mantine/core'
-import { m } from 'framer-motion'
-import React from 'react'
+import { Button, Card, Group, Space, Stack, Text, Title } from '@mantine/core'
 
-type Props = {}
-
-function DetailsCard({}: Props) {
+function DetailsCard() {
   const ownerId = '0x48Bb46F5B7c115d93837DcA2a81C608CdE52a8Cf'
   const shortenedAddress =
     ownerId.substring(0, 5) + '...' + ownerId.substring(ownerId.length - 5)
@@ -47,9 +34,9 @@ function DetailsCard({}: Props) {
         </Text>
         <Card.Section p="lg">
           <Text align="right">
-            "The totem that acts as a double to power is no longer protected by
-            taboo; there is a breach in the wall of prohibitions." - Achille
-            Mbembe, "The Aesthetics of Vulgarity"
+            The totem that acts as a double to power is no longer protected by
+            taboo; there is a breach in the wall of prohibitions. - Achille
+            Mbembe, The Aesthetics of Vulgarity
             <Space />
           </Text>
         </Card.Section>

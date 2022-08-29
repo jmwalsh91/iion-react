@@ -1,4 +1,3 @@
-
 import ScrollTry from '~/components/ScrollTry'
 
 function Index() {

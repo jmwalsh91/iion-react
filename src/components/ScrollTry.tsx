@@ -1,29 +1,20 @@
-import {
-  Button,
-  Card,
-  Container,
-  Grid,
-  Paper,
-  Slider,
-  Stack,
-  Title,
-} from '@mantine/core'
+import { Container, Grid, Title } from '@mantine/core'
 import chroma from 'chroma-js'
-import { motion, MotionConfig, useScroll, useSpring } from 'framer-motion'
-import React, { useEffect } from 'react'
+import { motion, useScroll } from 'framer-motion'
+import { useState } from 'react'
 
 import Board from '~/components/Surfaces/Board'
-import Presence from './Motion/Presence'
 
+import Presence from './Motion/Presence'
 import ScrollYProvider from './Motion/ScrollYProvider'
 import CollectionCard from './Surfaces/CollectionCard'
 import DetailsCard from './Surfaces/DetailsCard'
 
 function ScrollTry() {
-  const [value, setValue] = React.useState(40)
-  const [color1, setColor1] = React.useState<string>()
+  const [value, setValue] = useState(40)
+  const [color1, setColor1] = useState<string>()
   const { scrollYProgress } = useScroll()
-  const scaleX = useSpring(scrollYProgress)
+  /*   const scaleX = useSpring(scrollYProgress) */
   const colorz = chroma
     .scale(['lightblue', 'purple', 'cyan', 'pink'])
     .domain([0, 1])

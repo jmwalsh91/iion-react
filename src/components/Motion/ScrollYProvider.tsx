@@ -1,12 +1,11 @@
-import { Container, Grid, Slider, Title } from '@mantine/core'
 import chroma from 'chroma-js'
-import { motion, MotionConfig, useScroll, useSpring } from 'framer-motion'
-import React, { useEffect } from 'react'
+import { motion, useScroll } from 'framer-motion'
+import { useState } from 'react'
 
 function ScrollYProvider() {
-  const [color1, setColor1] = React.useState<string>()
+  const [color1, setColor1] = useState<string>()
   const { scrollYProgress } = useScroll()
-  const scaleX = useSpring(scrollYProgress)
+
   const colorz = chroma.bezier(['lightblue', 'purple', 'cyan']).scale()
 
   scrollYProgress.onChange(() => {

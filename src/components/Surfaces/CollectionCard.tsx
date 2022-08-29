@@ -1,6 +1,4 @@
-import { Card, Grid, Title, Text, Button, Mark } from '@mantine/core'
-
-import ExpandedBoard from './ExpandedBoard'
+import { Button, Card, Grid, Mark, Text, Title } from '@mantine/core'
 
 function CollectionCard() {
   const ownerId = '0x48Bb46F5B7c115d93837DcA2a81C608CdE52a8Cf'
@@ -82,14 +80,14 @@ function CollectionCard() {
             >
               <Card.Section inheritPadding withBorder>
                 <Text>
-                  Perhaps the world's second worst crime is boredom. The first
-                  is being a bore. Perhaps the world's second worst crime is
-                  boredom. The first is being a bore. Perhaps the world's second
-                  worst crime is boredom. The first is being a bore. Perhaps the
-                  world's second worst crime is boredom. The first is being a
-                  bore. Perhaps the world's second worst crime is boredom. The
-                  first is being a bore. Perhaps the world's second worst crime
-                  is boredom.
+                  Perhaps the world&apos;s second worst crime is boredom. The
+                  first is being a bore. Perhaps the world&apos;s second worst
+                  crime is boredom. The first is being a bore. Perhaps the
+                  world&apos;s second worst crime is boredom. The first is being
+                  a bore. Perhaps the world&apos;s second worst crime is
+                  boredom. The first is being a bore. Perhaps the world&apos;s
+                  second worst crime is boredom. The first is being a bore.
+                  Perhaps the world&apos;s second worst crime is boredom.
                 </Text>
               </Card.Section>
             </Card>

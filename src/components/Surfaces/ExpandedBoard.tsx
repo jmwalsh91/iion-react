@@ -1,5 +1,4 @@
-import { Card, Text, Stack, Button, Title } from '@mantine/core'
-import { AnimatePresence, motion } from 'framer-motion'
+import { Button, Card, Stack, Text, Title } from '@mantine/core'
 import { useState } from 'react'
 
 import ViewWrapper from '../Motion/ViewWrapper'
