@@ -1,13 +1,13 @@
 import { Container } from '@mantine/core'
 import { Meta } from '@storybook/react'
 
-import DetailsCard from '../components/Surfaces/DetailsCard'
+import ExpandedBoard from '../components/Surfaces/ExpandedBoard'
 
 import { BoardDetailProps } from '~/types/components'
 
 const meta: Meta = {
-  title: 'Details Card',
-  component: DetailsCard,
+  title: 'Expanded Board',
+  component: ExpandedBoard,
 }
 const handleClick = () => {
   console.log('Clicky!')
@@ -33,14 +33,6 @@ export const Default = () => (
       backgroundColor: 'pink',
     }}
   >
-    <DetailsCard
-      owner={mockProps.owner}
-      title={mockProps.title}
-      description={mockProps.description}
-      price={mockProps.price}
-      image={mockProps.image}
-      shareUrl={mockProps.shareUrl}
-      buyUrl={mockProps.buyUrl}
-    />
+    <ExpandedBoard title={mockProps.title} image={mockProps.image} />
   </Container>
 )
