@@ -19,15 +19,18 @@ export const BoardCardProps: BoardProps = {
   title: 'Solargoth',
 }
 
+/**
+ * Gallery mock for creating Boards
+ */
 export const mockGallery = [
-  { title: 'Solargoth', image: '/img1.png' },
-  { title: 'Phthalo', image: '/img2.png' },
-  { title: 'Tridentata', image: '/img3.png' },
-  { title: 'Waiting', image: '/img4.png' },
-  { title: 'Socrates', image: '/img5.png' },
-  { title: 'Jesuve', image: '/img6.png' },
-  { title: 'Gorge', image: '/img7.png' },
-  { title: 'edge', image: '/img8.png' },
-  { title: 'Thing', image: '/achillefreud.png' },
-  { title: 'Ideology', image: '/slavojclown.png' },
+  { title: 'Solargoth', image: 'src/public/img1.png' },
+  { title: 'Phthalo', image: 'src/public/img2.png' },
+  { title: 'Tridentata', image: 'src/public/img3.png' },
+  { title: 'Waiting', image: 'src/public/img4.png' },
+  { title: 'Socrates', image: 'src/public/img5.png' },
+  { title: 'Jesuve', image: 'src/public/img6.png' },
+  { title: 'Gorge', image: 'src/public/img7.png' },
+  { title: 'edge', image: 'src/public/img8.png' },
+  { title: 'Thing', image: 'src/public/achillefreud.png' },
+  { title: 'Ideology', image: 'src/public/slavojclown.png' },
 ]

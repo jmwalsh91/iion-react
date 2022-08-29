@@ -1,9 +1,21 @@
 import { Button, Card, Group, Space, Stack, Text, Title } from '@mantine/core'
+import { BoardDetailProps } from '~/types/components'
 
-function DetailsCard() {
-  const ownerId = '0x48Bb46F5B7c115d93837DcA2a81C608CdE52a8Cf'
+function DetailsCard({
+  owner,
+  title,
+  description,
+  image,
+  price,
+  shareUrl,
+  buyUrl,
+}: BoardDetailProps) {
   const shortenedAddress =
-    ownerId.substring(0, 5) + '...' + ownerId.substring(ownerId.length - 5)
+    owner.substring(0, 5) + '...' + owner.substring(owner.length - 5)
+  /**
+   * Both of these are required props, but at this point, it is not worth the work to fetch vals.
+   */
+  const urls = [shareUrl, buyUrl]
   return (
     <Card
       p="lg"
@@ -26,7 +38,7 @@ function DetailsCard() {
             marginBottom: '-1rem',
           }}
         >
-          Name of Item
+          {title}
         </Title>
 
         <Text color="dimmed" align="right">
@@ -34,9 +46,7 @@ function DetailsCard() {
         </Text>
         <Card.Section p="lg">
           <Text align="right">
-            The totem that acts as a double to power is no longer protected by
-            taboo; there is a breach in the wall of prohibitions. - Achille
-            Mbembe, The Aesthetics of Vulgarity
+            {description}
             <Space />
           </Text>
         </Card.Section>
@@ -46,8 +56,8 @@ function DetailsCard() {
             alignContent: 'flex-end',
           }}
         >
-          <Text size="xl">0.005 ETH</Text>
-          <Button variant="filled" color="dark" size="lg">
+          <Text size="xl">{price + ' ETH'}</Text>
+          <Button variant="filled" color="dark" size="lg"  >
             {' '}
             Buy!
           </Button>

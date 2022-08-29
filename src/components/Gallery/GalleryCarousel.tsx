@@ -5,10 +5,10 @@ import Board from '../Surfaces/Board'
 import { BoardProps } from '~/types/components'
 
 type Props = {
-  mockGallery: BoardProps[]
+  gallery: BoardProps[]
 }
 
-function GalleryCarousel({ mockGallery }: Props) {
+function GalleryCarousel({ gallery }: Props) {
   return (
     <Carousel
       height="40rem"
@@ -20,7 +20,7 @@ function GalleryCarousel({ mockGallery }: Props) {
         marginTop: '7rem',
       }}
     >
-      {mockGallery.map((item: BoardProps) => {
+      {gallery.map((item: BoardProps) => {
         return (
           <Carousel.Slide key={item.title}>
             <Board title={item.title} image={item.image} />
