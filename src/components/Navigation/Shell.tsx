@@ -3,6 +3,7 @@ import {
   Burger,
   Header,
   MediaQuery,
+  ScrollArea,
   Text,
   useMantineTheme,
 } from '@mantine/core'
@@ -60,7 +61,22 @@ export default function Shell({ children }: any) {
         </Header>
       }
     >
-      {children}
+      <div
+        style={{
+          border: '10px solid black',
+        }}
+      >
+        <ScrollArea
+          type="auto"
+          scrollbarSize={10}
+          sx={{
+            overflowY: 'scroll',
+            scrollSnapType: 'y mandatory',
+          }}
+        >
+          {children}
+        </ScrollArea>
+      </div>
     </AppShell>
   )
 }

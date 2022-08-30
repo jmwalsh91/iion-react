@@ -4,9 +4,9 @@ import { BoardProps, CollectionCardProps } from '~/types/components'
  */
 export const CollectionCardProp: CollectionCardProps = {
   owner: '0x1234567890123456789012345678901234567890',
-  title: 'Solargoth',
-  description:
-    'Solargoth is a space that is a place for you to explore and enjoy.',
+  title: 'Sbl8City',
+  description: `..SHRDLU was an early natural-language understanding computer program, developed by Terry Winograd at MIT in 1968–1970. In the program, the user carries on a conversation with the computer, moving objects, naming collections and querying the state of a simplified "blocks world", essentially a virtual box filled with different blocks.[1]SHRDLU was an early natural-language understanding computer program, developed by Terry Winograd at MIT in 1968–1970."blocks world", "blocks world", "blocks world", 
+    ,`,
   image: 'src/public/img1.png',
   url: '',
   bg: 'src/public/iionbg.png',
