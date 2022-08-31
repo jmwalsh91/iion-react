@@ -1,4 +1,4 @@
-import { Button, Card, Dialog, Paper, Stack, Text } from '@mantine/core'
+import { Button, Card, Container, Dialog, Paper, Stack, Text } from '@mantine/core'
 import { motion, MotionConfig } from 'framer-motion'
 import { useState } from 'react'
 import DetailModal from '../Modals/DetailModal'
@@ -49,7 +49,8 @@ function Board({ image, title }: Props) {
             ease: 'easeInOut',
           }}
         >
-          <Dialog
+          <Container>
+            {/*   <Dialog
             opened={open}
             position={{ top: '10%', left: '30%' }}
             sx={{
@@ -57,13 +58,14 @@ function Board({ image, title }: Props) {
               borderRadius: '3rem',
               boxShadow: '0px 5px 10px 4px rgba(0, 0, 0, 0.5)',
             }}
-          >
+          > */}
             {/* <ExpandedBoard image={image} /> */}
             <DetailModal />
             <Button variant="gradient" onClick={() => setOpen(!open)}>
               Close
             </Button>
-          </Dialog>
+          </Container>
+          {/*   </Dialog> */}
         </motion.div>
       )}
     </motion.div>
