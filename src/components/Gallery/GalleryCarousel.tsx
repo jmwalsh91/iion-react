@@ -1,4 +1,5 @@
 import { Carousel } from '@mantine/carousel'
+import { LayoutGroup } from 'framer-motion'
 
 import Board from '../Surfaces/Board'
 
@@ -10,24 +11,31 @@ type Props = {
 
 function GalleryCarousel({ gallery }: Props) {
   return (
-    <Carousel
-      height="40rem"
-      slideSize="33.3333%"
-      loop
-      align="start"
-      slidesToScroll={2}
-      sx={{
-        marginTop: '7rem',
-      }}
-    >
-      {gallery.map((item: BoardProps) => {
-        return (
-          <Carousel.Slide key={item.title}>
-            <Board title={item.title} image={item.image} />
-          </Carousel.Slide>
-        )
-      })}
-    </Carousel>
+    <LayoutGroup>
+      <Carousel
+        height="40rem"
+        breakpoints={[
+          { minWidth: 'xl', slideSize: '25%' },
+          { minWidth: 'md', slideSize: '33.33333%' },
+          { minWidth: 'sm', slideSize: '50%', slideGap: 0 },
+          { minWidth: 'xs', slideSize: '100%', slideGap: 0 },
+        ]}
+        loop
+        align="center"
+        slidesToScroll={1}
+        sx={{
+          marginTop: '7rem',
+        }}
+      >
+        {gallery.map((item: BoardProps) => {
+          return (
+            <Carousel.Slide key={item.title}>
+              <Board title={item.title} image={item.image} />
+            </Carousel.Slide>
+          )
+        })}
+      </Carousel>
+    </LayoutGroup>
   )
 }
 export default GalleryCarousel

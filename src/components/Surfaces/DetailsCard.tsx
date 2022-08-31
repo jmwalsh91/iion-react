@@ -1,4 +1,5 @@
 import { Button, Card, Group, Space, Stack, Text, Title } from '@mantine/core'
+import { motion, MotionConfig } from 'framer-motion'
 import { BoardDetailProps } from '~/types/components'
 
 function DetailsCard({
@@ -17,57 +18,72 @@ function DetailsCard({
    */
   const urls = [shareUrl, buyUrl]
   return (
-    <Card
-      p="lg"
-      shadow="lg"
-      withBorder
-      sx={{
-        width: '20rem',
-        height: '20rem',
-        margin: '3rem',
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: '-100%',
+      }}
+      animate={{
+        opacity: 1,
+        y: '0%',
+      }}
+      transition={{
+        duration: 1,
+        ease: 'easeInOut',
       }}
     >
-      <Stack
+      <Card
+        p="lg"
+        shadow="lg"
+        withBorder
         sx={{
-          height: '100%',
+          width: '20rem',
+          height: '20rem',
+          margin: '3rem',
         }}
       >
-        <Title
-          align="right"
+        <Stack
           sx={{
-            marginBottom: '-1rem',
+            height: '100%',
           }}
         >
-          {title}
-        </Title>
+          <Title
+            align="right"
+            sx={{
+              marginBottom: '-1rem',
+            }}
+          >
+            {title}
+          </Title>
 
-        <Text color="dimmed" align="right">
-          by: {shortenedAddress}
-        </Text>
-        <Card.Section p="lg">
-          <Text align="right">
-            {description}
-            <Space />
+          <Text color="dimmed" align="right">
+            by: {shortenedAddress}
           </Text>
-        </Card.Section>
-        <Group
-          sx={{
-            justifyContent: 'flex-end',
-            alignContent: 'flex-end',
-          }}
-        >
-          <Text size="xl">{price + ' ETH'}</Text>
-          <Button variant="filled" color="dark" size="lg"  >
-            {' '}
-            Buy!
-          </Button>
-          <Button variant="light" size="lg" color="dark">
-            {' '}
-            Share!{' '}
-          </Button>
-        </Group>
-      </Stack>
-    </Card>
+          <Card.Section p="lg">
+            <Text align="right">
+              {description}
+              <Space />
+            </Text>
+          </Card.Section>
+          <Group
+            sx={{
+              justifyContent: 'flex-end',
+              alignContent: 'flex-end',
+            }}
+          >
+            <Text size="xl">{price + ' ETH'}</Text>
+            <Button variant="filled" color="dark" size="lg">
+              {' '}
+              Buy!
+            </Button>
+            <Button variant="light" size="lg" color="dark">
+              {' '}
+              Share!{' '}
+            </Button>
+          </Group>
+        </Stack>
+      </Card>
+    </motion.div>
   )
 }
 

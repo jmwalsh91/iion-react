@@ -61,22 +61,9 @@ export default function Shell({ children }: any) {
         </Header>
       }
     >
-      <div
-        style={{
-          border: '10px solid black',
-        }}
-      >
-        <ScrollArea
-          type="auto"
-          scrollbarSize={10}
-          sx={{
-            overflowY: 'scroll',
-            scrollSnapType: 'y mandatory',
-          }}
-        >
-          {children}
-        </ScrollArea>
-      </div>
+
+        {children}
+  
     </AppShell>
   )
 }

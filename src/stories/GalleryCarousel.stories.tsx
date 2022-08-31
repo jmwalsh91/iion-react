@@ -1,4 +1,5 @@
 import { Meta } from '@storybook/react'
+import { LayoutGroup } from 'framer-motion'
 
 import { mockGallery } from '~/utils/mocks/FoundationMocks'
 
@@ -25,6 +26,8 @@ export const Default = () => (
       backgroundColor: mockProps.color,
     }}
   >
-    <GalleryCarousel gallery={mockGallery}></GalleryCarousel>
+    <LayoutGroup>
+      <GalleryCarousel gallery={mockGallery}></GalleryCarousel>
+    </LayoutGroup>
   </div>
 )

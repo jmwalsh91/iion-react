@@ -9,6 +9,7 @@ import {
   ScrollArea,
 } from '@mantine/core'
 import GalleryCarousel from '~/components/Gallery/GalleryCarousel'
+import AnimateExpandBoard from '~/components/Motion/AnimateExpandBoard'
 
 import Section from '~/components/Motion/Section'
 import ScrollTry from '~/components/ScrollTry'
@@ -18,7 +19,12 @@ import { CollectionCardProp, mockGallery } from '~/utils/mocks/FoundationMocks'
 
 function Index() {
   return (
-    <ScrollArea type="always">
+    <Container
+      fluid
+      sx={{
+        height: '100%',
+      }}
+    >
       <Section>
         <Grid>
           <Grid.Col span={6}>
@@ -93,15 +99,14 @@ function Index() {
             }}
           >
             <Stack>
-              <Title>Welcome to iion.</Title>
-              <Text>
-                iion is a decentralized space for you to explore and enjoy.
-              </Text>
+              <Section>
+                <AnimateExpandBoard />
+              </Section>
             </Stack>
           </Grid.Col>
         </Grid>
       </Section>
-    </ScrollArea>
+    </Container>
   )
 }
 

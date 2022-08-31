@@ -25,9 +25,9 @@ function Section({ children }: Props) {
       style={{
         backgroundColor: color1,
         height: '100vh',
-        scrollSnapStop: 'always',
+/*         scrollSnapStop: 'always',
         scrollSnapType: 'y proximity',
-        scrollSnapAlign: 'start',
+        scrollSnapAlign: 'start', */
       }}
     >
       {children}
