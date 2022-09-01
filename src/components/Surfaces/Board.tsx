@@ -1,8 +1,17 @@
-import { Button, Card, Container, Dialog, Paper, Stack, Text } from '@mantine/core'
+import {
+  Button,
+  Card,
+  Container,
+  Dialog,
+  Paper,
+  Stack,
+  Text,
+} from '@mantine/core'
+import { useClickOutside } from '@mantine/hooks'
 import { motion, MotionConfig } from 'framer-motion'
 import { useState } from 'react'
-import DetailModal from '../Modals/DetailModal'
 
+import DetailModal from '../Modals/DetailModal'
 import ViewWrapper from '../Motion/ViewWrapper'
 import ExpandedBoard from './ExpandedBoard'
 
@@ -13,6 +22,8 @@ type Props = {
 
 function Board({ image, title }: Props) {
   const [open, setOpen] = useState(false)
+
+  const outsideRef = useClickOutside(() => setOpen(false))
 
   return (
     /*  <ViewWrapper> */
@@ -49,7 +60,7 @@ function Board({ image, title }: Props) {
             ease: 'easeInOut',
           }}
         >
-          <Container>
+          <Container ref={outsideRef}>
             {/*   <Dialog
             opened={open}
             position={{ top: '10%', left: '30%' }}
@@ -64,8 +75,8 @@ function Board({ image, title }: Props) {
             <Button variant="gradient" onClick={() => setOpen(!open)}>
               Close
             </Button>
+            {/*   </Dialog> */}
           </Container>
-          {/*   </Dialog> */}
         </motion.div>
       )}
     </motion.div>

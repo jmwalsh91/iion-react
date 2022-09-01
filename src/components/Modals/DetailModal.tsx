@@ -1,21 +1,11 @@
-import {
-  Grid,
-  Modal,
-  Paper,
-  Stack,
-  Title,
-  Text,
-  Group,
-  Center,
-  Container,
-} from '@mantine/core'
+import { Container, Grid } from '@mantine/core'
 
 import {
   BoardDetailCardProps,
   mockGallery,
 } from '~/utils/mocks/FoundationMocks'
-import DetailsCard from '../Surfaces/DetailsCard'
 
+import DetailsCard from '../Surfaces/DetailsCard'
 import ExpandedBoard from '../Surfaces/ExpandedBoard'
 
 function DetailModal() {
