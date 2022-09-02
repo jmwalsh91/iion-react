@@ -1,18 +1,23 @@
-import { Carousel } from '@mantine/carousel'
+import { Carousel, Embla } from '@mantine/carousel'
 import { LayoutGroup } from 'framer-motion'
 
 import Board from '../Surfaces/Board'
 
 import { BoardProps } from '~/types/components'
+import { useCallback, useState } from 'react'
+import useEmblaCarousel from 'embla-carousel-react'
 
 type Props = {
   gallery: BoardProps[]
 }
 
 function GalleryCarousel({ gallery }: Props) {
+  const [embla, setEmbla] = useState<Embla | null>(null)
+
   return (
     <LayoutGroup>
       <Carousel
+        getEmblaApi={setEmbla}
         height="40rem"
         breakpoints={[
           { minWidth: 'xl', slideSize: '25%' },
@@ -30,7 +35,7 @@ function GalleryCarousel({ gallery }: Props) {
         {gallery.map((item: BoardProps) => {
           return (
             <Carousel.Slide key={item.title}>
-              <Board title={item.title} image={item.image} />
+              <Board title={item.title} image={item.image} embla={embla} />
             </Carousel.Slide>
           )
         })}

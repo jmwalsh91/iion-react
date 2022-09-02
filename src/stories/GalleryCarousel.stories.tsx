@@ -26,8 +26,6 @@ export const Default = () => (
       backgroundColor: mockProps.color,
     }}
   >
-    <LayoutGroup>
-      <GalleryCarousel gallery={mockGallery}></GalleryCarousel>
-    </LayoutGroup>
+    <GalleryCarousel gallery={mockGallery}></GalleryCarousel>
   </div>
 )
