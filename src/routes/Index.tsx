@@ -1,18 +1,8 @@
-import {
-  Group,
-  Stack,
-  Title,
-  Text,
-  Container,
-  Grid,
-  Center,
-  ScrollArea,
-} from '@mantine/core'
+import { Center, Container, Grid, Stack, Text, Title } from '@mantine/core'
+
 import GalleryCarousel from '~/components/Gallery/GalleryCarousel'
 import AnimateExpandBoard from '~/components/Motion/AnimateExpandBoard'
-
 import Section from '~/components/Motion/Section'
-import ScrollTry from '~/components/ScrollTry'
 import CollectionCard from '~/components/Surfaces/CollectionCard'
 import ExpandedBoard from '~/components/Surfaces/ExpandedBoard'
 import { CollectionCardProp, mockGallery } from '~/utils/mocks/FoundationMocks'

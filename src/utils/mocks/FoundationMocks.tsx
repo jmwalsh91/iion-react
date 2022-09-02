@@ -1,4 +1,8 @@
-import { BoardDetailProps, BoardProps, CollectionCardProps } from '~/types/components'
+import {
+  BoardDetailProps,
+  BoardProps,
+  CollectionCardProps,
+} from '~/types/components'
 /**
  * Collection Card props
  */
@@ -16,11 +20,11 @@ export const CollectionCardProp: CollectionCardProps = {
  */
 export const BoardCardProps: BoardProps = {
   image: 'src/public/img1.png',
-  title: 'Solargoth',
+  title: 'ElYucateco',
 }
 export const BoardDetailCardProps: BoardDetailProps = {
   owner: '0x1234567890123456789012345678901234567890',
-  title: 'Solargoth',
+  title: 'ElYucateco',
   description: `In the program, the user carries on a conversation with the computer, moving objects, naming collections and querying the state of a simplified "blocks world"
     ,`,
   image: 'src/public/img1.png',
@@ -32,7 +36,7 @@ export const BoardDetailCardProps: BoardDetailProps = {
  * Gallery mock for creating Boards
  */
 export const mockGallery = [
-  { title: 'Solargoth', image: 'src/public/img1.png' },
+  { title: 'ElYucateco', image: 'src/public/img1.png' },
   { title: 'Phthalo', image: 'src/public/img2.png' },
   { title: 'Tridentata', image: 'src/public/img3.png' },
   { title: 'Waiting', image: 'src/public/img4.png' },

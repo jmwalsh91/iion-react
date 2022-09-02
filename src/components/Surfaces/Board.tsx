@@ -1,27 +1,12 @@
 import { Embla } from '@mantine/carousel'
-import {
-  Button,
-  Card,
-  Container,
-  Dialog,
-  Grid,
-  Group,
-  Paper,
-  Space,
-  Stack,
-  Text,
-} from '@mantine/core'
+import { Paper, Space } from '@mantine/core'
 import { useClickOutside } from '@mantine/hooks'
-import useEmblaCarousel from 'embla-carousel-react'
-import { LayoutGroup, motion, MotionConfig } from 'framer-motion'
+import { LayoutGroup, motion } from 'framer-motion'
 import { useCallback, useState } from 'react'
+
 import { BoardDetailCardProps } from '~/utils/mocks/FoundationMocks'
 
-import DetailModal from '../Modals/DetailModal'
-import ViewWrapper from '../Motion/ViewWrapper'
 import DetailsCard from './DetailsCard'
-import ExpandedBoard from './ExpandedBoard'
-
 type Props = {
   image: string
   title: string

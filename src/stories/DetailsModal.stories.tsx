@@ -19,7 +19,6 @@ export const Default = () => (
       backgroundColor: 'pink',
     }}
   >
-    <DetailModal
-    />
+    <DetailModal />
   </Container>
 )

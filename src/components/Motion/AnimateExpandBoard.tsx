@@ -8,7 +8,6 @@ function AnimateExpandBoard() {
   const [selectedId, setSelectedId] = useState<string>('null')
   return (
     <Container
-   
       sx={{
         height: '100vh',
         width: '100vw',

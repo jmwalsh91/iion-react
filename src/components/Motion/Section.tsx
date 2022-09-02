@@ -1,6 +1,6 @@
-import { Center, Container } from '@mantine/core'
+import { Container } from '@mantine/core'
 import chroma from 'chroma-js'
-import { motion, useScroll } from 'framer-motion'
+import { useScroll } from 'framer-motion'
 import { useState } from 'react'
 
 type Props = {
@@ -25,14 +25,12 @@ function Section({ children }: Props) {
       style={{
         backgroundColor: color1,
         height: '100vh',
-/*         scrollSnapStop: 'always',
+        /*         scrollSnapStop: 'always',
         scrollSnapType: 'y proximity',
         scrollSnapAlign: 'start', */
       }}
     >
       {children}
-
-      {color1}
     </Container>
   )
 }

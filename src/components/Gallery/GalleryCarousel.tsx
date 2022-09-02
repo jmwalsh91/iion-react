@@ -1,11 +1,10 @@
 import { Carousel, Embla } from '@mantine/carousel'
 import { LayoutGroup } from 'framer-motion'
+import { useState } from 'react'
 
 import Board from '../Surfaces/Board'
 
 import { BoardProps } from '~/types/components'
-import { useCallback, useState } from 'react'
-import useEmblaCarousel from 'embla-carousel-react'
 
 type Props = {
   gallery: BoardProps[]

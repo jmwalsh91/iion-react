@@ -3,7 +3,6 @@ import {
   Burger,
   Header,
   MediaQuery,
-  ScrollArea,
   Text,
   useMantineTheme,
 } from '@mantine/core'
@@ -61,9 +60,7 @@ export default function Shell({ children }: any) {
         </Header>
       }
     >
-
-        {children}
-  
+      {children}
     </AppShell>
   )
 }

@@ -1,5 +1,6 @@
 import { Button, Card, Group, Space, Stack, Text, Title } from '@mantine/core'
-import { motion, MotionConfig } from 'framer-motion'
+import { motion } from 'framer-motion'
+
 import { BoardDetailProps } from '~/types/components'
 
 function DetailsCard({
@@ -27,8 +28,7 @@ function DetailsCard({
         z: 10000000000,
       }}
       transition={{
-        duration: 0.5
-
+        duration: 0.5,
       }}
     >
       <Card
