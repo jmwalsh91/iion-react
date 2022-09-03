@@ -33,7 +33,19 @@ function Index() {
             <Stack>
               <Title>Welcome to iion.</Title>
               <Text>
-                iion is a decentralized space for you to explore and enjoy.
+                fhey were a people relentlessly obsessed by the belief that they
+                were not created for misfortune, and the certainty tlrat one day
+                they would reach /wy mara-ey, the Land Without Evil. And their
+                sages, ceaselessly meditating on the means of reaching it, would
+                reflect on the problem of their origin. how does it happen that
+                we inhabit an imperfect earth? The grandeur of the question is
+                matched by the heroism of the reply: Men are not to blame if
+                existence is unjust. We need not beat our breasts because we
+                exist in a state of imperl-ection. What is at the root of the
+                imperfbction besetting men, which wc did not desire? \t arises
+                from the fact that things in their totality are one. A startling
+                utterance, of a kind to send Western thought reeling back to its
+                beginnings.
               </Text>
             </Stack>
           </Grid.Col>

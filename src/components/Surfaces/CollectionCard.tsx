@@ -1,14 +1,4 @@
-import {
-  Button,
-  Card,
-  CardSection,
-  Divider,
-  Grid,
-  Mark,
-  Stack,
-  Text,
-  Title,
-} from '@mantine/core'
+import { Button, Card, Grid, Mark, Stack, Text, Title } from '@mantine/core'
 
 import { CollectionCardProps } from '~/types/components'
 
@@ -17,6 +7,7 @@ function CollectionCard({
   title,
   description,
   image,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   url,
   bg,
 }: CollectionCardProps) {

@@ -7,6 +7,7 @@ function DetailsCard({
   owner,
   title,
   description,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   image,
   price,
   shareUrl,
@@ -17,6 +18,7 @@ function DetailsCard({
   /**
    * Both of these are required props, but at this point, it is not worth the work to fetch vals.
    */
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const urls = [shareUrl, buyUrl]
   return (
     <motion.div

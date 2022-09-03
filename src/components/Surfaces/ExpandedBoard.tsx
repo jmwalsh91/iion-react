@@ -1,5 +1,4 @@
-import { Button, Card, Paper, Stack, Text, Title } from '@mantine/core'
-import { useState } from 'react'
+import { Paper } from '@mantine/core'
 
 import ViewWrapper from '../Motion/ViewWrapper'
 
@@ -8,11 +7,11 @@ type Props = {
   title?: string
 }
 
-function ExpandedBoard({ image, title,  }: Props) {
-
+function ExpandedBoard({ image, title }: Props) {
   return (
     <ViewWrapper>
       <Paper
+        key={title}
         sx={{
           margin: '0 auto',
           height: '30rem',

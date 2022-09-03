@@ -9,9 +9,7 @@ const meta: Meta = {
   title: 'Details Card',
   component: DetailsCard,
 }
-const handleClick = () => {
-  console.log('Clicky!')
-}
+
 const mockProps: BoardDetailProps = {
   owner: '0x1234567890123456789012345678901234567890',
   title: 'Solargoth',

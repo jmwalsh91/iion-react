@@ -10,7 +10,7 @@ import DetailsCard from './DetailsCard'
 type Props = {
   image: string
   title: string
-  embla: Embla | null
+  embla?: Embla | null
 }
 
 function Board({ image, title, embla }: Props) {

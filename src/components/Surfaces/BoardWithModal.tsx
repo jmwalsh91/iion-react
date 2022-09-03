@@ -1,19 +1,8 @@
-import {
-  Button,
-  Card,
-  Container,
-  Dialog,
-  Paper,
-  Stack,
-  Text,
-} from '@mantine/core'
+import { Button, Container, Paper } from '@mantine/core'
 import { closeAllModals, openModal } from '@mantine/modals'
-import { motion, MotionConfig } from 'framer-motion'
-import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 import DetailModal from '../Modals/DetailModal'
-import ViewWrapper from '../Motion/ViewWrapper'
-import ExpandedBoard from './ExpandedBoard'
 
 type Props = {
   image: string
@@ -21,12 +10,13 @@ type Props = {
 }
 
 function BoardWithModal({ image, title }: Props) {
-  const [open, setOpen] = useState(false)
+  /*   const [open, setOpen] = useState(false) */
 
   return (
     /*  <ViewWrapper> */
     <motion.div layout>
       <Paper
+        key={title}
         sx={{
           margin: '0 auto',
           marginTop: '5 rem',

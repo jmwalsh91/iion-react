@@ -1,5 +1,4 @@
 import { Meta } from '@storybook/react'
-import { LayoutGroup } from 'framer-motion'
 
 import { mockGallery } from '~/utils/mocks/FoundationMocks'
 
@@ -9,9 +8,7 @@ const meta: Meta = {
   title: 'GalleryCarousel',
   component: GalleryCarousel,
 }
-const handleClick = () => {
-  console.log('Clicky!')
-}
+
 const mockProps = {
   color: 'teal',
 }

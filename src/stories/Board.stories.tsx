@@ -6,9 +6,7 @@ const meta: Meta = {
   title: 'Board',
   component: Board,
 }
-const handleClick = () => {
-  console.log('Clicky!')
-}
+
 const mockProps = {
   title: 'Solargoth',
   image: 'src/public/img1.png',
