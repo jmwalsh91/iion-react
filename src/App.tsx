@@ -1,3 +1,4 @@
+import { Provider } from '@f8n/foundationkit-hooks'
 import { ModalsProvider } from '@mantine/modals'
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom'
 import { WagmiConfig } from 'wagmi'
@@ -11,14 +12,16 @@ export function App() {
   return (
     <BrowserRouter>
       <WagmiConfig client={wagmiClient}>
-        <ModalsProvider modals={{ boardDetails: DetailModal }}>
-          <Shell>
-            <Routes>
-              <Route path="/" element={<Index />} />
-            </Routes>
-            <Outlet />
-          </Shell>
-        </ModalsProvider>
+        <Provider>
+          <ModalsProvider modals={{ boardDetails: DetailModal }}>
+            <Shell>
+              <Routes>
+                <Route path="/" element={<Index />} />
+              </Routes>
+              <Outlet />
+            </Shell>
+          </ModalsProvider>
+        </Provider>
       </WagmiConfig>
     </BrowserRouter>
   )
