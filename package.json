@@ -49,6 +49,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/server": "^11.10.0",
+    "@f8n/foundationkit-hooks": "^0.0.1-alpha.7",
     "@mantine/carousel": "^5.2.3",
     "@mantine/core": "^5.2.3",
     "@mantine/dates": "^5.2.3",
