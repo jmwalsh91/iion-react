@@ -1,76 +1,92 @@
-import {
-  Card,
-  Stack,
-  Title,
-  Text,
-  Button,
-  Group,
-  Space,
-  Breadcrumbs,
-} from '@mantine/core'
-import { m } from 'framer-motion'
-import React from 'react'
+import { Button, Card, Group, Space, Stack, Text, Title } from '@mantine/core'
+import { motion } from 'framer-motion'
 
-type Props = {}
+import { BoardDetailProps } from '~/types/components'
 
-function DetailsCard({}: Props) {
-  const ownerId = '0x48Bb46F5B7c115d93837DcA2a81C608CdE52a8Cf'
+function DetailsCard({
+  owner,
+  title,
+  description,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  image,
+  price,
+  shareUrl,
+  buyUrl,
+}: BoardDetailProps) {
   const shortenedAddress =
-    ownerId.substring(0, 5) + '...' + ownerId.substring(ownerId.length - 5)
+    owner.substring(0, 5) + '...' + owner.substring(owner.length - 5)
+  /**
+   * Both of these are required props, but at this point, it is not worth the work to fetch vals.
+   */
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const urls = [shareUrl, buyUrl]
   return (
-    <Card
-      p="lg"
-      shadow="lg"
-      withBorder
-      sx={{
-        width: '20rem',
-        height: '20rem',
-        margin: '3rem',
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1,
+        z: 10000000000,
+      }}
+      transition={{
+        duration: 0.5,
       }}
     >
-      <Stack
+      <Card
+        p="lg"
+        shadow="lg"
+        withBorder
         sx={{
-          height: '100%',
+          position: 'absolute',
+          width: '20rem',
+          height: '20rem',
+          margin: '3rem',
+          zIndex: 9,
         }}
       >
-        <Title
-          align="right"
+        <Stack
           sx={{
-            marginBottom: '-1rem',
+            height: '100%',
           }}
         >
-          Name of Item
-        </Title>
+          <Title
+            align="right"
+            sx={{
+              marginBottom: '-1rem',
+            }}
+          >
+            {title}
+          </Title>
 
-        <Text color="dimmed" align="right">
-          by: {shortenedAddress}
-        </Text>
-        <Card.Section p="lg">
-          <Text align="right">
-            "The totem that acts as a double to power is no longer protected by
-            taboo; there is a breach in the wall of prohibitions." - Achille
-            Mbembe, "The Aesthetics of Vulgarity"
-            <Space />
+          <Text color="dimmed" align="right">
+            by: {shortenedAddress}
           </Text>
-        </Card.Section>
-        <Group
-          sx={{
-            justifyContent: 'flex-end',
-            alignContent: 'flex-end',
-          }}
-        >
-          <Text size="xl">0.005 ETH</Text>
-          <Button variant="filled" color="dark" size="lg">
-            {' '}
-            Buy!
-          </Button>
-          <Button variant="light" size="lg" color="dark">
-            {' '}
-            Share!{' '}
-          </Button>
-        </Group>
-      </Stack>
-    </Card>
+          <Card.Section p="lg">
+            <Text align="right">
+              {description}
+              <Space />
+            </Text>
+          </Card.Section>
+          <Group
+            sx={{
+              justifyContent: 'flex-end',
+              alignContent: 'flex-end',
+            }}
+          >
+            <Text size="xl">{price + ' ETH'}</Text>
+            <Button variant="filled" color="dark" size="lg">
+              {' '}
+              Buy!
+            </Button>
+            <Button variant="light" size="lg" color="dark">
+              {' '}
+              Share!{' '}
+            </Button>
+          </Group>
+        </Stack>
+      </Card>
+    </motion.div>
   )
 }
 

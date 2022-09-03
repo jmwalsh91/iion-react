@@ -47,15 +47,13 @@
     ]
   },
   "dependencies": {
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
-    "react-router-dom": "6.3.0",
     "@emotion/react": "^11.10.0",
     "@emotion/server": "^11.10.0",
     "@mantine/carousel": "^5.2.3",
     "@mantine/core": "^5.2.3",
     "@mantine/dates": "^5.2.3",
     "@mantine/hooks": "^5.2.3",
+    "@mantine/modals": "^5.2.4",
     "@mantine/notifications": "^5.2.3",
     "@mantine/rte": "^5.2.3",
     "@types/chroma-js": "^2.1.4",
@@ -63,7 +61,10 @@
     "chroma-js": "^2.4.2",
     "dayjs": "^1.11.5",
     "embla-carousel-react": "^7.0.1",
-    "framer-motion": "^7.2.1"
+    "framer-motion": "^7.2.1",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-router-dom": "6.3.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "6.5.8",

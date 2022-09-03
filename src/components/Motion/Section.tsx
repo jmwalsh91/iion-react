@@ -1,8 +1,13 @@
+import { Container } from '@mantine/core'
 import chroma from 'chroma-js'
-import { motion, useScroll } from 'framer-motion'
+import { useScroll } from 'framer-motion'
 import { useState } from 'react'
 
-function ScrollYProvider() {
+type Props = {
+  children: React.ReactNode
+}
+
+function Section({ children }: Props) {
   const [color1, setColor1] = useState<string>()
   const { scrollYProgress } = useScroll()
 
@@ -13,18 +18,21 @@ function ScrollYProvider() {
     setColor1(colorz(scrollYProgress.get()).css())
     console.log(color1)
   })
+
   return (
-    <div
+    <Container
+      fluid
       style={{
         backgroundColor: color1,
-        height: '300vh',
+        height: '100vh',
+        /*         scrollSnapStop: 'always',
+        scrollSnapType: 'y proximity',
+        scrollSnapAlign: 'start', */
       }}
     >
-      <motion.div style={{ scale: scrollYProgress, backgroundColor: 'red' }} />
-
-      {color1}
-    </div>
+      {children}
+    </Container>
   )
 }
 
-export default ScrollYProvider
+export default Section

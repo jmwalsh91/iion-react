@@ -1,21 +1,32 @@
-import { Card, Text, Stack, Button } from '@mantine/core'
-import { AnimatePresence, motion } from 'framer-motion'
-import { useState } from 'react'
+import { Embla } from '@mantine/carousel'
+import { Paper, Space } from '@mantine/core'
+import { useClickOutside } from '@mantine/hooks'
+import { LayoutGroup, motion } from 'framer-motion'
+import { useCallback, useState } from 'react'
 
-import ViewWrapper from '../Motion/ViewWrapper'
+import { BoardDetailCardProps } from '~/utils/mocks/FoundationMocks'
 
+import DetailsCard from './DetailsCard'
 type Props = {
   image: string
   title: string
+  embla?: Embla | null
 }
 
-function Board({ image, title }: Props) {
-  const [open, setOpen] = useState(true)
+function Board({ image, title, embla }: Props) {
+  const [open, setOpen] = useState(false)
+
+  const onSlideClick = useCallback(() => {
+    embla && embla.clickAllowed() ? setOpen(true) : null
+  }, [embla])
+
+  const outsideRef = useClickOutside(() => setOpen(false))
 
   return (
-    <ViewWrapper>
-      <Stack justify="center" align="center">
-        <Card
+    /*  <ViewWrapper> */
+    <LayoutGroup>
+      <motion.div layout key={title} ref={outsideRef}>
+        <Paper
           sx={{
             margin: '0 auto',
             marginTop: '5 rem',
@@ -28,18 +39,26 @@ function Board({ image, title }: Props) {
             backgroundSize: 'cover',
             boxShadow: '0px 5px 10px 4px rgba(0, 0, 0, 0.5)',
           }}
+          onClick={() => onSlideClick()}
         >
-          <Button variant="gradient" onClick={() => setOpen(!open)}>
-            Open
-          </Button>
-        </Card>
-
-        <Text size="xl" weight={700}>
-          {' '}
-          {title}
-        </Text>
-      </Stack>
-    </ViewWrapper>
+          {open && (
+            <>
+              <Space h="xl" />
+              <DetailsCard
+                owner={BoardDetailCardProps.owner}
+                title={BoardDetailCardProps.title}
+                description={BoardDetailCardProps.description}
+                image={BoardDetailCardProps.image}
+                price={BoardDetailCardProps.price}
+                shareUrl={''}
+                buyUrl={''}
+              />
+            </>
+          )}
+        </Paper>
+      </motion.div>
+    </LayoutGroup>
+    /*    </ViewWrapper> */
   )
 }
 export default Board

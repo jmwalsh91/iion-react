@@ -1,11 +1,10 @@
 import {
   AppShell,
+  Burger,
   Header,
   MediaQuery,
-  Burger,
-  useMantineTheme,
-  Image,
   Text,
+  useMantineTheme,
 } from '@mantine/core'
 import React, { useState } from 'react'
 

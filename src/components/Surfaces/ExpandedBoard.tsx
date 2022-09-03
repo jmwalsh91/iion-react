@@ -1,43 +1,30 @@
-import { Card, Text, Stack, Button, Title } from '@mantine/core'
-import { AnimatePresence, motion } from 'framer-motion'
-import { useState } from 'react'
+import { Paper } from '@mantine/core'
 
 import ViewWrapper from '../Motion/ViewWrapper'
 
 type Props = {
   image: string
-  title: string
+  title?: string
 }
 
 function ExpandedBoard({ image, title }: Props) {
-  const [big, setBig] = useState<boolean>(false)
-  const size = big ? '40rem' : '25rem'
   return (
     <ViewWrapper>
-      <Stack justify="center" align="center">
-        <Card
-          sx={{
-            margin: '0 auto',
-
-            height: '30rem',
-            width: size,
-            borderRadius: '3rem',
-            backgroundImage: `url("${image}")`,
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            boxShadow: '0px 5px 10px 4px rgba(0, 0, 0, 0.5)',
-          }}
-        >
-          <Title>THis be</Title>
-        </Card>
-
-        <Text size="xl" weight={700}>
-          {' '}
-          {title}
-        </Text>
-      </Stack>
-      <Button onClick={() => setBig(!big)}>Toggle</Button>
+      <Paper
+        key={title}
+        sx={{
+          margin: '0 auto',
+          height: '30rem',
+          width: '30rem',
+          zIndex: 3000,
+          borderRadius: '3rem',
+          backgroundImage: `url("${image}")`,
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          boxShadow: '0px 5px 10px 4px rgba(0, 0, 0, 0.5)',
+        }}
+      ></Paper>
     </ViewWrapper>
   )
 }

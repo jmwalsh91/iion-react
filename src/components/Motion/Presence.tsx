@@ -1,4 +1,4 @@
-import { Blockquote, Button, Title } from '@mantine/core'
+import { Button, Title } from '@mantine/core'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 
