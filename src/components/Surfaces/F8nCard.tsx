@@ -13,23 +13,25 @@ function F8nCard({ contractAddress }: Props) {
 
   useEffect(() => {
     const data: any = fetch(
-      'https://api-us-west1.tatum.io/v3/nft/collection/ETH/0x0d2166B7bF87Dab6C19D55197c774983BcC00704'
+      'https://api-us-west1.tatum.io/v3/nft/collection/ETH/0x0d2166B7bF87Dab6C19D55197c774983BcC00704?pageSize=50'
     )
       .then((res) => res.json())
       .then((data) => {
         const data2 = data.map((item: any) => {
-          switch (item) {
-            case item.metadata:
-              return {
-                id: item.id,
-                name: item.metadata.metadata.name,
-                image: item.metadata.metadata.image,
-              }
-
-            case !item.metadata:
-              return null
+          console.log(item)
+          if (item.metadata) {
+            console.log('case1')
+            return {
+              id: item.tokenId,
+              name: item.metadata.metadata.name,
+            }
+          }
+          if (!item.metadata) {
+            console.log('case2')
+            return null
           }
         })
+        return data2
       })
       .then((data2) => console.log(data2))
       .catch((err) => console.log(err))
@@ -49,7 +51,7 @@ function F8nCard({ contractAddress }: Props) {
   }) */
   return (
     <Paper>
-      <pre>{JSON.stringify(con)}</pre>
+      <div>oh hi</div>
     </Paper>
   )
 }
