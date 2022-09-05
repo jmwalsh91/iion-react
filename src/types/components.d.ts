@@ -35,3 +35,10 @@ export interface CollectionContractResponse {
   tokenId: string
   metadata: TokenMetaData
 }
+
+export interface NFTDetails {
+  tokenId: string
+  name: string
+  description: string
+  image: string
+}
