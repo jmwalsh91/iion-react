@@ -1,5 +1,5 @@
 import { useMarketInfo } from '@f8n/foundationkit-hooks'
-import { Paper, Title, Text, Skeleton } from '@mantine/core'
+import { Paper, Title, Text, Skeleton, Group } from '@mantine/core'
 import { ListItem } from '@mantine/core/lib/List/ListItem/ListItem'
 import { useQuery, useQueryClient, UseQueryResult } from '@tanstack/react-query'
 import React, { Suspense, useEffect } from 'react'
@@ -41,14 +41,28 @@ function F8nCard({ contractAddress }: Props) {
 
   return (
     <Suspense>
-      {data?.map((item: NFTDetails) => {
-        return (
-          <Paper key={item.tokenId}>
-            <Title>{item.name} </Title>
-            <Text>{item.description} </Text>
-          </Paper>
-        )
-      })}
+      <Group>
+        {data?.map((item: NFTDetails) => {
+          return (
+            <Paper
+              key={item.tokenId}
+              color="gray"
+              shadow="lg"
+              sx={{
+                width: '25rem',
+                height: '35rem',
+                display: 'flex',
+                flexDirection: 'column',
+                padding: '1rem',
+                border: '3px solid black',
+              }}
+            >
+              <Title>{item.name} </Title>
+              <Text>{item.description} </Text>
+            </Paper>
+          )
+        })}
+      </Group>
     </Suspense>
   )
 }
