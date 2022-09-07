@@ -25,6 +25,6 @@ function reshapeFromTatum(item: CollectionContractResponse): NFTDetails {
     tokenId: item.tokenId,
     name: item.metadata.metadata.name,
     description: item.metadata.metadata.description,
-    image: item.metadata.metadata.image,
+    image: `https://ipfs.io/ipfs/${item.metadata.metadata.image}`,
   }
 }
