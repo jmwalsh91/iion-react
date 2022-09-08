@@ -1,12 +1,11 @@
-import { useMarketInfo } from '@f8n/foundationkit-hooks'
-import { Paper, Title, Text, Skeleton, Group } from '@mantine/core'
-import { ListItem } from '@mantine/core/lib/List/ListItem/ListItem'
+import { Paper, Title, Text, Skeleton, Group, Image } from '@mantine/core'
 import { useQuery, useQueryClient, UseQueryResult } from '@tanstack/react-query'
-import React, { Suspense, useEffect } from 'react'
-import { useContract, useContractRead, useProvider } from 'wagmi'
-import { NFTDetails } from '~/types/components'
+import { Suspense } from 'react'
+import { useProvider } from 'wagmi'
+
 import { getCollection } from '~/utils/services/fetchers'
-import ABI from '../../utils/services/ABI.json'
+
+import { NFTDetails } from '~/types/components'
 type Props = {
   contractAddress: string
 }
@@ -17,8 +16,8 @@ function F8nCard({ contractAddress }: Props) {
   const { isLoading, error, data }: UseQueryResult<NFTDetails[] | null> =
     useQuery(
       ['collection'],
-      //TODO: fix typing
-      () => getCollection('0x0d2166B7bF87Dab6C19D55197c774983BcC00704') as any
+      //TODO: fix typing`
+      () => getCollection('0x0d2166B7bF87Dab6C19D55197c774983BcC00704')
     )
   /* const con = useContractRead({
     addressOrName: contractAddress,
@@ -54,10 +53,13 @@ function F8nCard({ contractAddress }: Props) {
                 display: 'flex',
                 flexDirection: 'column',
                 padding: '1rem',
-                border: '3px solid black',
+                borderRadius: '3rem',
+                border: '2px solid #eaeaea',
+                boxShadow: '0px 5px 10px 4px rgba(0, 0, 0, 0.5)',
               }}
             >
               <Title>{item.name} </Title>
+              <Image src={item.image} height="20rem" />
               <Text>{item.description} </Text>
             </Paper>
           )
