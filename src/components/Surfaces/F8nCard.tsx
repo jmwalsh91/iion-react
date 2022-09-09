@@ -49,7 +49,7 @@ function F8nCard({ contractAddress }: Props) {
               shadow="lg"
               sx={{
                 width: '25rem',
-                height: '35rem',
+                height: '100%',
                 display: 'flex',
                 flexDirection: 'column',
                 padding: '1rem',
