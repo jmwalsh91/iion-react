@@ -6,6 +6,7 @@ import { useProvider } from 'wagmi'
 import { getCollection } from '~/utils/services/fetchers'
 
 import { NFTDetails } from '~/types/components'
+
 type Props = {
   contractAddress: string
 }
