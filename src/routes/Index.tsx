@@ -5,6 +5,7 @@ import AnimateExpandBoard from '~/components/Motion/AnimateExpandBoard'
 import Section from '~/components/Motion/Section'
 import CollectionCard from '~/components/Surfaces/CollectionCard'
 import ExpandedBoard from '~/components/Surfaces/ExpandedBoard'
+import F8nCard from '~/components/Surfaces/F8nCard'
 import { CollectionCardProp, mockGallery } from '~/utils/mocks/FoundationMocks'
 
 function Index() {
@@ -51,6 +52,7 @@ function Index() {
           </Grid.Col>
         </Grid>
       </Section>
+      <F8nCard contractAddress="0x0d2166B7bF87Dab6C19D55197c774983BcC00704" />
       <Section>
         <Stack>
           <Title

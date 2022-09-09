@@ -49,6 +49,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/server": "^11.10.0",
+    "@f8n/foundationkit-hooks": "^0.0.1-alpha.7",
     "@mantine/carousel": "^5.2.3",
     "@mantine/core": "^5.2.3",
     "@mantine/dates": "^5.2.3",
@@ -56,15 +57,18 @@
     "@mantine/modals": "^5.2.4",
     "@mantine/notifications": "^5.2.3",
     "@mantine/rte": "^5.2.3",
+    "@tanstack/react-query": "^4.2.3",
     "@types/chroma-js": "^2.1.4",
     "@vercel/node": "^2.4.4",
     "chroma-js": "^2.4.2",
     "dayjs": "^1.11.5",
     "embla-carousel-react": "^7.0.1",
+    "ethers": "^5.7.0",
     "framer-motion": "^7.2.1",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "react-router-dom": "6.3.0"
+    "react-router-dom": "6.3.0",
+    "wagmi": "^0.6.4"
   },
   "devDependencies": {
     "@storybook/addon-actions": "6.5.8",

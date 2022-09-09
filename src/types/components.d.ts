@@ -21,3 +21,24 @@ export interface BoardDetailProps {
   shareUrl: string
   buyUrl: string
 }
+
+export interface TokenMetadata {
+  url: string
+  metadata?: {
+    name: string
+    description: string
+    image: string
+  }
+  tokenId: string
+}
+export interface CollectionContractResponse {
+  tokenId: string
+  metadata: TokenMetaData
+}
+
+export interface NFTDetails {
+  tokenId: string
+  name: string
+  description: string
+  image: string
+}
