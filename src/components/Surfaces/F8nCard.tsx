@@ -1,7 +1,10 @@
-import { Paper, Title, Text, Skeleton, Group, Image } from '@mantine/core'
-import { useQuery, useQueryClient, UseQueryResult } from '@tanstack/react-query'
+import { Group, Image, Paper, Skeleton, Text, Title } from '@mantine/core'
+import {
+  UseQueryResult,
+  useQuery /* useQueryClient */,
+} from '@tanstack/react-query'
 import { Suspense } from 'react'
-import { useProvider } from 'wagmi'
+/* import { useProvider } from 'wagmi' */
 
 import { getCollection } from '~/utils/services/fetchers'
 
@@ -12,13 +15,13 @@ type Props = {
 }
 
 function F8nCard({ contractAddress }: Props) {
-  const provider = useProvider()
-  const queryClient = useQueryClient()
+  /*   const provider = useProvider()
+  const queryClient = useQueryClient() */
   const { isLoading, error, data }: UseQueryResult<NFTDetails[] | null> =
     useQuery(
       ['collection'],
       //TODO: fix typing`
-      () => getCollection('0x0d2166B7bF87Dab6C19D55197c774983BcC00704')
+      () => getCollection(contractAddress)
     )
   /* const con = useContractRead({
     addressOrName: contractAddress,
