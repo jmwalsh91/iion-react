@@ -24,6 +24,7 @@ function CollectionCard({
       sx={{
         height: '30rem',
         maxWidth: '50rem',
+        minWidth: '25rem',
         margin: '3rem',
         backgroundImage: background,
         borderRadius: '3rem',
