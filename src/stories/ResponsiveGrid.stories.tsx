@@ -1,4 +1,5 @@
 import { Meta } from '@storybook/react'
+import { ResponsiveGridProps } from '~/types/components'
 
 import ResponsiveGrid from '../components/Layout/ResponsiveGrid'
 
@@ -18,7 +19,8 @@ const mockProps: any = {
 }
 export default meta
 
-export function Default(args: JSX.IntrinsicAttributes) {
+
+export function Default(args: JSX.IntrinsicAttributes & ResponsiveGridProps) {
   return (
     <div
       style={{
