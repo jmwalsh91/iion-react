@@ -20,20 +20,25 @@ const mockProps: CollectionCardProps = {
 }
 export default meta
 
-export const Default = () => (
-  <div
-    style={{
-      width: '100vw',
-      height: '100vh',
-      backgroundColor: 'teal',
-    }}
-  >
-    <CollectionCard
-      owner={mockProps.owner}
-      title={mockProps.title}
-      description={mockProps.description}
-      image={mockProps.image}
-      url={mockProps.url}
-    />
-  </div>
-)
+export function Default(args: JSX.IntrinsicAttributes & CollectionCardProps) {
+  return (
+    <div
+      style={{
+        width: '100vw',
+        height: '100vh',
+        backgroundColor: 'teal',
+      }}
+    >
+      <CollectionCard {...args} />
+    </div>
+  )
+}
+
+Default.args = {
+  owner: mockProps.owner,
+  title: mockProps.title,
+  description: mockProps.description,
+  image: mockProps.image,
+  url: mockProps.url,
+  bg: mockProps.bg,
+}
