@@ -1,3 +1,4 @@
+import { Paper } from '@mantine/core'
 import { Meta } from '@storybook/react'
 import { ResponsiveGridProps } from '~/types/components'
 
@@ -19,7 +20,6 @@ const mockProps: any = {
 }
 export default meta
 
-
 export function Default(args: JSX.IntrinsicAttributes & ResponsiveGridProps) {
   return (
     <div
@@ -29,7 +29,15 @@ export function Default(args: JSX.IntrinsicAttributes & ResponsiveGridProps) {
         backgroundColor: 'teal',
       }}
     >
-      <ResponsiveGrid {...args} />
+      <Paper
+        sx={{
+          width: '50vw',
+          height: '50vh',
+          backgroundColor: 'pink',
+        }}
+      >
+        <ResponsiveGrid {...args} />
+      </Paper>
     </div>
   )
 }
