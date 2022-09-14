@@ -14,15 +14,21 @@ const mockProps = {
 }
 
 export default meta
+export function Default(args: any) {
+  return (
+    <div
+      style={{
+        width: '100vw',
+        height: '100vh',
+        backgroundColor: mockProps.color,
+      }}
+    >
+      <Board {...args}></Board>
+    </div>
+  )
+}
 
-export const Default = () => (
-  <div
-    style={{
-      width: '100vw',
-      height: '100vh',
-      backgroundColor: mockProps.color,
-    }}
-  >
-    <Board image={mockProps.image} title={mockProps.title}></Board>
-  </div>
-)
+Default.args = {
+  image: mockProps.image,
+  title: mockProps.title,
+}
