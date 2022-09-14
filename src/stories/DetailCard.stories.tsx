@@ -22,23 +22,27 @@ const mockProps: BoardDetailProps = {
 }
 export default meta
 
-export const Default = () => (
-  <Container
-    fluid
-    sx={{
-      height: '100vh',
-      padding: '2rem',
-      backgroundColor: 'pink',
-    }}
-  >
-    <DetailsCard
-      owner={mockProps.owner}
-      title={mockProps.title}
-      description={mockProps.description}
-      price={mockProps.price}
-      image={mockProps.image}
-      shareUrl={mockProps.shareUrl}
-      buyUrl={mockProps.buyUrl}
-    />
-  </Container>
-)
+export function Default(args: JSX.IntrinsicAttributes & BoardDetailProps) {
+  return (
+    <Container
+      fluid
+      sx={{
+        height: '100vh',
+        padding: '2rem',
+        backgroundColor: 'pink',
+      }}
+    >
+      <DetailsCard {...args} />
+    </Container>
+  )
+}
+
+Default.args = {
+  owner: mockProps.owner,
+  title: mockProps.title,
+  description: mockProps.description,
+  image: mockProps.image,
+  price: mockProps.price,
+  shareUrl: mockProps.shareUrl,
+  buyUrl: mockProps.buyUrl,
+}
