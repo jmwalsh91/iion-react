@@ -5,6 +5,7 @@ import { useState } from 'react'
 import Board from '../Surfaces/Board'
 
 import { BoardProps } from '~/types/components'
+import CollectionPreview from '../Cards/CollectionPreview'
 
 type Props = {
   gallery: BoardProps[]
@@ -34,7 +35,12 @@ function CollectionCarousel({ gallery }: Props) {
         {gallery.map((item: BoardProps) => {
           return (
             <Carousel.Slide key={item.title}>
-              <Board title={item.title} image={item.image} embla={embla} />
+              <CollectionPreview
+                title={item.title}
+                image={item.image}
+                embla={embla}
+                description="string string"
+              />
             </Carousel.Slide>
           )
         })}
