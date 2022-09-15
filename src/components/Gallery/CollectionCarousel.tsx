@@ -21,9 +21,9 @@ function CollectionCarousel({ gallery }: Props) {
         height="40rem"
         breakpoints={[
           { minWidth: 'xl', slideSize: '25%' },
-          { minWidth: 'md', slideSize: '33.33333%' },
-          { minWidth: 'sm', slideSize: '50%', slideGap: 0 },
-          { minWidth: 'xs', slideSize: '100%', slideGap: 0 },
+          { minWidth: 'md', slideSize: '50%', slideGap: 3 },
+          { minWidth: 'sm', slideSize: '66%', slideGap: 3 },
+          { minWidth: 'xs', slideSize: '100%', slideGap: 5 },
         ]}
         loop
         align="center"
