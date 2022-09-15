@@ -5,7 +5,7 @@ import { ResponsiveGridProps } from '~/types/components'
 import ResponsiveGrid from '../components/Layout/ResponsiveGrid'
 
 const meta: Meta = {
-  title: 'Collection Card',
+  title: 'Responsive Grid',
   component: ResponsiveGrid,
 }
 //FIXME: These are placeholder props
@@ -43,8 +43,9 @@ export function Default(args: JSX.IntrinsicAttributes & ResponsiveGridProps) {
 }
 
 Default.args = {
-  slot1: 'slot1',
-  slot2: 'slot2',
-  slot3: 'slot3',
+  slot1: mockProps.owner,
+  slot2: mockProps.title,
+  slot3: mockProps.image,
   slot4: 'slot4',
+  slot5: 'slot5',
 }
