@@ -1,4 +1,4 @@
-import { Grid } from '@mantine/core'
+import { Button, Grid } from '@mantine/core'
 import React from 'react'
 
 type Props = {
@@ -6,10 +6,9 @@ type Props = {
   slot2: React.ReactNode
   slot3: React.ReactNode
   slot4: React.ReactNode
-  slot5: React.ReactNode
 }
 
-function ResponsiveGrid({ slot1, slot2, slot3, slot4, slot5 }: Props) {
+function ResponsiveGrid({ slot1, slot2, slot3, slot4 }: Props) {
   return (
     <Grid>
       <Grid.Col lg={6}>
@@ -67,7 +66,7 @@ function ResponsiveGrid({ slot1, slot2, slot3, slot4, slot5 }: Props) {
             backgroundColor: 'red',
           }}
         >
-          {slot5}
+          <Button> Action </Button>
         </div>
       </Grid.Col>
     </Grid>
