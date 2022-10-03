@@ -1,10 +1,10 @@
 import { Meta } from '@storybook/react'
 
-import Board from '../components/Surfaces/Board'
+import BoardF8n from '../components/Surfaces/BoardF8n'
 
 const meta: Meta = {
-  title: 'Board',
-  component: Board,
+  title: 'BoardF8n',
+  component: BoardF8n,
 }
 
 const mockProps = {
@@ -14,6 +14,7 @@ const mockProps = {
 }
 
 export default meta
+
 export function Default(args: any) {
   return (
     <div
@@ -23,7 +24,7 @@ export function Default(args: any) {
         backgroundColor: mockProps.color,
       }}
     >
-      <Board {...args}></Board>
+      <BoardF8n {...args}></BoardF8n>
     </div>
   )
 }
@@ -31,4 +32,5 @@ export function Default(args: any) {
 Default.args = {
   image: mockProps.image,
   title: mockProps.title,
+  description: 'this is a mock description for the card component',
 }

@@ -1,19 +1,20 @@
 import { Meta } from '@storybook/react'
 
-import Board from '../components/Surfaces/Board'
+import { mockGallery } from '~/utils/mocks/FoundationMocks'
+
+import CollectionCarousel from '../components/Gallery/CollectionCarousel'
 
 const meta: Meta = {
-  title: 'Board',
-  component: Board,
+  title: 'Collection Carousel',
+  component: CollectionCarousel,
 }
 
 const mockProps = {
-  title: 'Solargoth',
-  image: 'src/public/img1.png',
   color: 'teal',
 }
 
 export default meta
+
 export function Default(args: any) {
   return (
     <div
@@ -23,12 +24,11 @@ export function Default(args: any) {
         backgroundColor: mockProps.color,
       }}
     >
-      <Board {...args}></Board>
+      <CollectionCarousel {...args}></CollectionCarousel>
     </div>
   )
 }
 
 Default.args = {
-  image: mockProps.image,
-  title: mockProps.title,
+  gallery: mockGallery,
 }

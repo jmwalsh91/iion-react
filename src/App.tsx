@@ -5,6 +5,7 @@ import { WagmiConfig } from 'wagmi'
 
 import DetailModal from './components/Modals/DetailModal'
 import Shell from './components/Navigation/Shell'
+import Collection from './routes/Collection'
 import Index from './routes/Index'
 import { wagmiClient } from './utils/services/WagmiClient'
 
@@ -17,6 +18,7 @@ export function App() {
             <Shell>
               <Routes>
                 <Route path="/" element={<Index />} />
+                <Route path="/collections" element={<Collection />} />
               </Routes>
               <Outlet />
             </Shell>

@@ -3,10 +3,12 @@ import {
   Burger,
   Header,
   MediaQuery,
+  Space,
   Text,
   useMantineTheme,
 } from '@mantine/core'
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 export default function Shell({ children }: any) {
   const theme = useMantineTheme()
@@ -56,6 +58,8 @@ export default function Shell({ children }: any) {
               {' '}
               IION
             </Text>
+            <Space w={30} />
+            <NavLink to="/collections">Collections</NavLink>
           </div>
         </Header>
       }

@@ -32,6 +32,7 @@ export interface TokenMetadata {
   tokenId: string
 }
 export interface CollectionContractResponse {
+  meta: any
   tokenId: string
   metadata: TokenMetaData
 }
@@ -41,4 +42,11 @@ export interface NFTDetails {
   name: string
   description: string
   image: string
+}
+
+export interface ResponsiveGridProps {
+  slot1: React.ReactNode
+  slot2: React.ReactNode
+  slot3: React.ReactNode
+  slot4: React.ReactNode
 }
