@@ -13,7 +13,7 @@ import { NFTDetails } from '~/types/components'
 type Props = {
   contractAddress: string
 }
-//FIXME: Unoptimized images from IPFS provide horrible load times--and we do not have the ability to alter the file type of the original image. If we decouple this from the query to the collection contract, we lose valuable state. 
+//FIXME: Unoptimized images from IPFS provide horrible load times--and we do not have the ability to alter the file type of the original image. If we decouple this from the query to the collection contract, we lose valuable state.
 //TODO: explore more resources on foundationOS and reach out re: developer resources in this area.
 function F8nCard({ contractAddress }: Props) {
   /*   const provider = useProvider()

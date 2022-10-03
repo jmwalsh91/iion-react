@@ -1,8 +1,9 @@
 import { Paper } from '@mantine/core'
 import { Meta } from '@storybook/react'
-import { ResponsiveGridProps } from '~/types/components'
 
 import ResponsiveGrid from '../components/Layout/ResponsiveGrid'
+
+import { ResponsiveGridProps } from '~/types/components'
 
 const meta: Meta = {
   title: 'Responsive Grid',

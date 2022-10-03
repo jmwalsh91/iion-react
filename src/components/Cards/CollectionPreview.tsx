@@ -1,20 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Embla } from '@mantine/carousel'
-import {
-  Button,
-  Center,
-  Container,
-  Paper,
-  Space,
-  Stack,
-  Text,
-} from '@mantine/core'
+import { Button, Center, Paper, Stack, Text } from '@mantine/core'
 import { useClickOutside } from '@mantine/hooks'
 import { LayoutGroup, motion } from 'framer-motion'
 import { useCallback, useState } from 'react'
 
-import { BoardDetailCardProps } from '~/utils/mocks/FoundationMocks'
-
-import DetailsCard from '../Surfaces/DetailsCard'
 type Props = {
   image: string
   title: string
