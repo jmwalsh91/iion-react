@@ -14,14 +14,17 @@ function Index() {
       fluid
       sx={{
         height: '100%',
+        justifyContent: 'center',
       }}
     >
       <Section>
-        <Grid>
+        <Grid p="5rem">
           <Grid.Col span={6}>
             <ExpandedBoard
               image={mockGallery[0].image}
               title={mockGallery[0].title}
+              h="20rem"
+              w="20rem"
             />
           </Grid.Col>
           <Grid.Col
@@ -31,7 +34,13 @@ function Index() {
               justifyContent: 'center',
             }}
           >
-            <Stack>
+            <Stack
+              sx={{
+                border: '1px solid #eaeaea',
+                boxShadow: '0px 5px 10px 4px rgba(0, 0, 0, 0.5)',
+                padding: '1rem',
+              }}
+            >
               <Title>Welcome to iion.</Title>
               <Text>
                 fhey were a people relentlessly obsessed by the belief that they
@@ -39,14 +48,7 @@ function Index() {
                 they would reach /wy mara-ey, the Land Without Evil. And their
                 sages, ceaselessly meditating on the means of reaching it, would
                 reflect on the problem of their origin. how does it happen that
-                we inhabit an imperfect earth? The grandeur of the question is
-                matched by the heroism of the reply: Men are not to blame if
-                existence is unjust. We need not beat our breasts because we
-                exist in a state of imperl-ection. What is at the root of the
-                imperfbction besetting men, which wc did not desire? \t arises
-                from the fact that things in their totality are one. A startling
-                utterance, of a kind to send Western thought reeling back to its
-                beginnings.
+                we inhabit an imperfect earth?
               </Text>
             </Stack>
           </Grid.Col>

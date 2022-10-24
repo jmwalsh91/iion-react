@@ -5,17 +5,19 @@ import ViewWrapper from '../Motion/ViewWrapper'
 type Props = {
   image: string
   title?: string
+  h?: string
+  w?: string
 }
 
-function ExpandedBoard({ image, title }: Props) {
+function ExpandedBoard({ image, title, h, w }: Props) {
   return (
     <ViewWrapper>
       <Paper
         key={title}
         sx={{
           margin: '0 auto',
-          height: '30rem',
-          width: '30rem',
+          height: h ? h : '30rem',
+          width: w ? w : '30rem',
           zIndex: 3000,
           borderRadius: '3rem',
           backgroundImage: `url("${image}")`,
